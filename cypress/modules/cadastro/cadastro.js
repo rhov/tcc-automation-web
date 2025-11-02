@@ -10,14 +10,16 @@ class Cadastro {
         cy.get('h2[data-qa="account-created"]').should('contain', 'Account Created!');
     }
 
-    assertDeleteAccountVisible() {
-        cy.log('Verify that "ACCOUNT DELETED!" is visible');
-        cy.get('h2[data-qa="account-deleted"]').should('contain', 'Account Deleted!');
-    }   
+    
 
     assertEnterAccountInfoVisible() {
         cy.contains('b', 'Enter Account Information').should('be.visible');
     }
+
+    assertLoginToyourAccountVisible() {
+        cy.contains('h2', 'Login to your account').should('be.visible');
+    }
+
 
 
     assertSignupPage() {
@@ -45,9 +47,7 @@ class Cadastro {
         cy.get('a[data-qa="continue-button"]').click();
     }
 
-    clickDeleteAccount() {
-        cy.get('a[href="/delete_account"]').click();
-    }
+
 
     clickSignupButton() {
         cy.contains('button', 'Signup').click();

@@ -1,6 +1,6 @@
 // Módulo de Menu
 class Menu {
-    acessarPaginaCadastro() {
+    acessSignupLogin() {
         cy.get('a[href="/login"]').click();
     }
     assertHomePageVisible() {
@@ -9,6 +9,14 @@ class Menu {
     }
     assertSignupLinkVisible() {
         cy.contains('a[href="/login"]', 'Signup / Login').should('be.visible');
+    }
+
+    clickDeleteAccount() {
+        cy.get('a[href="/delete_account"]').click();
+    }ß
+
+    clickLogout() {
+        cy.get('a[href="/logout"][style="color:brown;"]').click();
     }
 
 }
