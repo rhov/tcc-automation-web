@@ -1,0 +1,28 @@
+{
+  "name": "tcc-automation-web",
+  "version": "1.0.0",
+  "description": "**Aluno:** Rodrigo Henrique   **Turma:** PGATS-2   **Professor:** Samuel Lucas   **Framework:** Cypress   **Site:** [https://automationexercise.com/](https://automationexercise.com/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhov/tcc-automation-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhov/tcc-automation-web/issues"
+  },
+  "homepage": "https://github.com/rhov/tcc-automation-web#readme",
+  "dependencies": {
+    "@faker-js/faker": "^10.1.0",
+    "faker": "^6.6.6",
+    "mochawesome": "^7.1.4"
+  },
+  "devDependencies": {
+    "cypress": "^14.5.4"
+  }
+}
