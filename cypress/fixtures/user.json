@@ -1,0 +1,12 @@
+{
+    "fullName": "Seiya Greek",
+    "firstName": "Seiya",
+    "lastName": "Greek",
+    "email": "seiya@mailinator.com",
+    "password": "seiya123",
+    "birthdate": {
+        "day": "5",
+        "month": "January",
+        "year": "2020"
+    }
+}

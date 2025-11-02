@@ -10,7 +10,9 @@ class Cadastro {
         cy.get('h2[data-qa="account-created"]').should('contain', 'Account Created!');
     }
 
-    
+    assertCreateAccountEmailExist() {
+        cy.contains('p', 'Email Address already exist!').should('be.visible');
+    }
 
     assertEnterAccountInfoVisible() {
         cy.contains('b', 'Enter Account Information').should('be.visible');

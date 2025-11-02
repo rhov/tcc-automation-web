@@ -24,6 +24,8 @@
 // -- This will overwrite an existing command --
 
 Cypress.Commands.add('visitAutomationExercise', () => {
-	cy.visit('https://automationexercise.com/');
+    cy.visit('https://automationexercise.com/');
+    cy.log('Verifying that home page is visible successfully');
+    cy.get('a[href="/"] > i').should('have.class', 'fa-home');
 });
 

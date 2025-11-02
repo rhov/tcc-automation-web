@@ -33,6 +33,11 @@ class Login {
         assertAccountDeletedVisible() {
                 cy.get('h2').should('contain', 'ACCOUNT DELETED!');
         }
+
+        assertErrorIncorrectEmailPasswordVisible() {
+                cy.log("Verify error 'Your email or password is incorrect!' is visible");
+                cy.get('p').should('contain', 'Your email or password is incorrect!');
+        }
 }
 
 module.exports = new Login();
