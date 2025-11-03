@@ -30,7 +30,6 @@ function createUser() {
     cadastro.typeMobileNumber();
     cadastro.clickCreateAccount();
     cadastro.clickContinueButton();
-    menu.clickLogout();
     return user;
 }
 

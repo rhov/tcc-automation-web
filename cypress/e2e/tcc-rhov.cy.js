@@ -53,6 +53,7 @@ describe('TCC Automação Web - Rodrigo Henrique', () => {
     it('Test Case 2: Login User with correct email and password', () => {
         const createUser = require('../support/helpers/createUser');
         const user = createUser();
+        menu.clickLogout();
         cy.visitAutomationExercise();
         menu.assertSignupLinkVisible();
         menu.acessSignupLogin();
@@ -136,7 +137,7 @@ describe('TCC Automação Web - Rodrigo Henrique', () => {
 
     });
 
-    it.only('Test Case 10: Verify Subscription in home page', () => {
+    it('Test Case 10: Verify Subscription in home page', () => {
         cy.visitAutomationExercise();
         cy.scrollTo('bottom');
         home.assertSubscriptionVisible();
@@ -146,17 +147,29 @@ describe('TCC Automação Web - Rodrigo Henrique', () => {
 
     });
 
-
+    it('Test Case 15: Place Order: Register before Checkout', () => {
+        cy.visitAutomationExercise();
+        const createUser = require('../support/helpers/createUser');
+        const user = createUser();
+        login.assertLogged(user.fullname);
+       /* menu.acessSignupLogin();
+        cadastro.assertSignupPage();
+        cadastro.typeSignupName(faker.person.fullName());
+        cadastro.typeSignupEmail(faker.internet.email());
+        cadastro.typeSignupPassword(faker.internet.password());
+        cadastro.clickSignupButton();
+        cadastro.assertAccountCreated();
+        cadastro.clickContinueButton();
+        menu.assertLoggedUser(faker.person.fullName());
+        products.addRandomProductsToCart(2);
+        menu.clickCart();
+        cart.assertCartPageVisible();*/
+    });
 });
 /*
 Test Case 15: Place Order: Register before Checkout
-1. Launch browser
-2. Navigate to url 'http://automationexercise.com'
-3. Verify that home page is visible successfully
-4. Click 'Signup / Login' button
-5. Fill all details in Signup and create account
-6. Verify 'ACCOUNT CREATED!' and click 'Continue' button
-7. Verify ' Logged in as username' at top
+
+
 8. Add products to cart
 9. Click 'Cart' button
 10. Verify that cart page is displayed
