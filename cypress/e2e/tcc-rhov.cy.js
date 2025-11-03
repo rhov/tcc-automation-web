@@ -120,8 +120,17 @@ describe('TCC Automação Web - Rodrigo Henrique', () => {
         products.assertVerifyProductsDetailPage();
         products.assertProductDetailInfoVisible();
     });
+
+    it('Test Case 9: Search Product', () => {
+        const palavraChave = 'Jeans';
+        cy.visitAutomationExercise();
+        menu.clickProducts();
+        products.assertAllProductsPageVisible();
+        products.typeSearchProduct(palavraChave);
+        products.clickSubmitSearch();
+        products.assertSearchedProductsPageVisible();
+        products.assertSearchedProductsListVisible();
+        products.assertSearchedProductsContainKeyword(palavraChave);
 });
 
-/*
-
-*/
+});
