@@ -147,38 +147,5 @@ describe('TCC Automação Web - Rodrigo Henrique', () => {
 
     });
 
-    it('Test Case 15: Place Order: Register before Checkout', () => {
-        cy.visitAutomationExercise();
-        const createUser = require('../support/helpers/createUser');
-        const user = createUser();
-        login.assertLogged(user.fullname);
-       /* menu.acessSignupLogin();
-        cadastro.assertSignupPage();
-        cadastro.typeSignupName(faker.person.fullName());
-        cadastro.typeSignupEmail(faker.internet.email());
-        cadastro.typeSignupPassword(faker.internet.password());
-        cadastro.clickSignupButton();
-        cadastro.assertAccountCreated();
-        cadastro.clickContinueButton();
-        menu.assertLoggedUser(faker.person.fullName());
-        products.addRandomProductsToCart(2);
-        menu.clickCart();
-        cart.assertCartPageVisible();*/
-    });
+   
 });
-/*
-Test Case 15: Place Order: Register before Checkout
-
-
-8. Add products to cart
-9. Click 'Cart' button
-10. Verify that cart page is displayed
-11. Click Proceed To Checkout
-12. Verify Address Details and Review Your Order
-13. Enter description in comment text area and click 'Place Order'
-14. Enter payment details: Name on Card, Card Number, CVC, Expiration date
-15. Click 'Pay and Confirm Order' button
-16. Verify success message 'Your order has been placed successfully!'
-17. Click 'Delete Account' button
-18. Verify 'ACCOUNT DELETED!' and click 'Continue' button
-*/
