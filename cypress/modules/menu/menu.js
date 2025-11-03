@@ -19,5 +19,12 @@ class Menu {
         cy.get('a[href="/logout"][style="color:brown;"]').click();
     }
 
+    clickContactUs() {
+        cy.get('a[href="/contact_us"]').click();
+    }
+
+    clickHome() {
+        cy.get('a[href="/"]').click();
+    }
 }
 module.exports = new Menu();

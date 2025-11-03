@@ -1,10 +1,12 @@
-    
+
+
 /// <reference types="cypress"/>
 const { faker } = require('@faker-js/faker');
 const cadastro = require('../modules/cadastro/cadastro');
 const menu = require('../modules/menu/menu');
 const login = require('../modules/login/login');
 const deleteAccount = require('../modules/delete/deleteAccount');
+const contato = require('../modules/contato/contato');
 const userFixtures = require('../fixtures/user.json');
 
 
@@ -83,7 +85,7 @@ describe('TCC Automação Web - Rodrigo Henrique', () => {
     });
 
     it('Test Case 5: Register User with existing email', () => {
-            cy.visitAutomationExercise();
+        cy.visitAutomationExercise();
         menu.assertSignupLinkVisible();
         menu.acessSignupLogin();
         cadastro.assertSignupPage();
@@ -93,9 +95,31 @@ describe('TCC Automação Web - Rodrigo Henrique', () => {
         cadastro.assertCreateAccountEmailExist();
     });
 
+    it.only('Test Case 6: Contact Us Form', () => {
+        cy.visitAutomationExercise();
+        menu.clickContactUs();
+        contato.assertContactPageVisible();
+        contato.typeName(userFixtures.fullName);
+        contato.typeEmail(userFixtures.email);
+        contato.typeSubject(userFixtures.subject);
+        contato.typeMessage();
+        contato.uploadFile();
+        contato.clickSubmitButton();
+        contato.assertContactSubmittedVisible();
+        contato.clickHomeButton();
+        menu.assertHomePageVisible();
+    });
 });
 
 /*
-
-8. Verify error 'Email Address already exist!' is visible
+Test Case 8: Verify All Products and product detail page
+1. Launch browser
+2. Navigate to url 'http://automationexercise.com'
+3. Verify that home page is visible successfully
+4. Click on 'Products' button
+5. Verify user is navigated to ALL PRODUCTS page successfully
+6. The products list is visible
+7. Click on 'View Product' of first product
+8. User is landed to product detail page
+9. Verify that detail detail is visible: product name, category, price, availability, condition, brand
 */
