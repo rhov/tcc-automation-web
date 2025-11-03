@@ -26,5 +26,9 @@ class Menu {
     clickHome() {
         cy.get('a[href="/"]').click();
     }
+
+    clickProducts() {
+        cy.get('a[href="/products"]').click();
+    }
 }
 module.exports = new Menu();
