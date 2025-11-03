@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Executando os testes
-        run: npx cypress run --disable-gpu --enable-unsafe-swiftshader
+        run: npx cypress run
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4

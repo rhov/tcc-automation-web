@@ -4,7 +4,8 @@
   "description": "**Aluno:** Rodrigo Henrique   **Turma:** PGATS-2   **Professor:** Samuel Lucas   **Framework:** Cypress   **Site:** [https://automationexercise.com/](https://automationexercise.com/)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:run": "cypress run",
+    "report": "cypress run --reporter mochawesome"
   },
   "repository": {
     "type": "git",
@@ -19,10 +20,10 @@
   "homepage": "https://github.com/rhov/tcc-automation-web#readme",
   "dependencies": {
     "@faker-js/faker": "^10.1.0",
-    "faker": "^6.6.6",
-    "mochawesome": "^7.1.4"
+    "faker": "^6.6.6"
   },
   "devDependencies": {
-    "cypress": "^14.5.4"
+    "cypress": "^14.5.4",
+    "mochawesome": "^7.1.4"
   }
 }
